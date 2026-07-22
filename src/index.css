@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+/* Iridescent Mesh Gradient Background with Subtle Drift Animation */
+@keyframes meshDrift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  background: radial-gradient(circle at 10% 20%, rgba(253, 242, 248, 1) 0%, rgba(251, 207, 232, 0.5) 30%, rgba(255, 241, 242, 0.9) 60%, rgba(253, 244, 245, 1) 100%) !important;
+  background-size: 200% 200% !important;
+  animation: meshDrift 15s ease infinite !important;
+  color: #0f172a !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Beautiful Fine Drafting Grid Overlay to emmulate HAOQI.DESIGN */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* App container layout rules */
+#root {
+  position: relative;
+  z-index: 2;
+}
+
+/* Transform brutalist/dark panels into premium glassmorphic cards */
+.bg-\[\#0b0f19\]\/80,
+.bg-\[\#0b0f19\]\/60,
+.bg-\[\#0b0f19\]\/90,
+.bg-\[\#0b0f19\],
+.bg-slate-950,
+.bg-slate-900,
+.bg-slate-950\/80,
+.bg-slate-900\/50,
+.bg-white\/\[0\.02\],
+.bg-white\/\[0\.03\],
+.bg-white\/5,
+.bg-indigo-500\/10,
+.bg-emerald-500\/10,
+.bg-amber-500\/10,
+.bg-indigo-600\/10,
+.bg-white {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.01),
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  border-radius: 24px !important;
+  color: #0f172a !important;
+}
+
+/* Header customization: Elegant, transparent floating glass bar */
+header,
+.bg-\[\#030712\]\/85 {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05) !important;
+  border-radius: 0px !important;
+  color: #0f172a !important;
+}
+
+/* Headings font overrides to match Outfit */
+h1, h2, h3, .font-display {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Dynamic text coloring to ensure perfect contrast against light theme */
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-white,
+.text-white\/90 {
+  color: #0f172a !important;
+}
+
+.text-slate-400,
+.text-slate-500,
+.text-slate-400\/80 {
+  color: #64748b !important;
+}
+
+/* Keep warning and alert colors functional */
+.text-emerald-400, .text-green-400 { color: #10b981 !important; }
+.text-amber-400, .text-yellow-400 { color: #f59e0b !important; }
+.text-rose-400, .text-red-400 { color: #f43f5e !important; }
+
+/* Subtle borders for pristine section separation */
+.border-white\/10,
+.border-white\/5,
+.border-white\/\[0\.08\],
+.border-white\/\[0\.06\],
+.border-slate-800,
+.border-slate-700,
+.border-slate-850,
+.border-2 {
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  border-width: 1px !important;
+}
+
+/* Form switchers and toggle bars */
+.bg-\[\#eaece6\],
+.bg-white\/\[0\.02\] {
+  background-color: rgba(15, 23, 42, 0.03) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Beautiful White Input fields */
+input, select, textarea {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  border-radius: 12px !important;
+  font-family: "Inter", sans-serif !important;
+  padding: 10px 14px;
+  font-size: 13px !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.01) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Buttons customized into premium pill elements */
+button, .cursor-pointer {
+  font-family: "Inter", sans-serif !important;
+  border-radius: 9999px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Black or color primary buttons turned into stylish organic controls */
+.bg-indigo-600,
+.bg-indigo-500,
+.bg-slate-950,
+.bg-slate-900,
+.bg-black {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 10px 20px !important;
+  font-weight: 500 !important;
+}
+
+.bg-indigo-600:hover,
+.bg-indigo-500:hover,
+.bg-slate-950:hover,
+.bg-slate-900:hover,
+.bg-black:hover {
+  background: #1e293b !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light / Secondary Buttons */
+.bg-slate-900\/50,
+.bg-white\/5 {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.bg-slate-900\/50:hover,
+.bg-white\/5:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+}
+
+/* Inactive Tab Switches */
+.text-black\/60,
+.text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Active tab state */
+.border-indigo-500,
+.bg-black.text-white {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-radius: 8px !important;
+}
+
+/* Table rows / Log list entries */
+.bg-white\/\[0\.02\],
+.bg-white\/\[0\.04\],
+.hover\:bg-white\/\[0\.04\]:hover {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+  border-radius: 12px !important;
+  color: #0f172a !important;
+}
+
+.hover\:bg-white\/\[0\.04\]:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Scrollbars to match premium airy feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+/* Grid & Dots removal */
+.pixel-grid {
+  background-image: none !important;
+}
+
+/* Extra tweaks for Recharts to keep color harmony */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(15, 23, 42, 0.04) !important;
+}
+
+.recharts-text {
+  fill: #64748b !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 11px !important;
+}
